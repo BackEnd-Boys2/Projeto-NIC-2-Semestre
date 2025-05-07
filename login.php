@@ -87,7 +87,7 @@
       text-decoration: underline;
     }
 
-    #alertaErro {
+    #alerta {
       width: 30%;
       text-align: center;
       margin: 0 auto;
@@ -109,36 +109,31 @@
 </div>
 
 <div class="container mt-3">
-  <div id="alertaErro" class="alert alert-danger alert-dismissible fade show d-none fixed-bottom mb-5" role="alert">
+  <div id="alerta" class="alert alert-danger alert-dismissible fade show d-none fixed-bottom mb-3" role="alert">
     Usuário ou senha incorretos.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
   </div>
 </div>
 
 <?php 
-  // Se existir uma variável de login e ela for false
-  if(isset($_SESSION["logado"]) && !$_SESSION["logado"]) {
-    // Se o erro de login for igual a 1 (erro de usuário)
-      if($_SESSION["erro_login"] == 1) { ?>
-        <script>
-          window.addEventListener('DOMContentLoaded', () => {
-            exibirAlerta(1);
-          });
-        </script>
-<?php } if($_SESSION["erro_login"] == 2) { ?>
-          <script>
-            window.addEventListener('DOMContentLoaded', () => {
-              exibirAlerta(2);
-            });
-          </script>
-<?php } else { ?>
-          <script>
-            window.addEventListener('DOMContentLoaded', () => {
-              exibirAlerta(3);
-            });
-          </script>
-<?php }
-    } 
+  if (isset($_SESSION["logado"]) && $_SESSION["logado"] === false) {
+    
+    // Verifica se erro_login existe
+    if (!isset($_SESSION["erro_login"])) {
+      // Logout com sucesso
+      $codigoErro = 4;
+    } else {
+      // Erros de login
+      $codigoErro = $_SESSION["erro_login"];
+    }
+
+    // Gera o script dinamicamente
+    echo "<script>
+      window.addEventListener('DOMContentLoaded', () => {
+        exibirAlerta($codigoErro);
+      });
+    </script>";
+  }
 ?>
   
 
@@ -147,7 +142,10 @@
 <script>
 
   function exibirAlerta(v) {
-    const alerta = document.getElementById('alertaErro');
+    const alerta = document.getElementById('alerta');
+
+    alerta.classList.remove("alert-success");
+    alerta.classList.add("alert-danger");
 
     switch(v) {
       case 1:
@@ -160,6 +158,12 @@
 
         case 3:
         alerta.textContent = "Usuário e senha incorretas.";
+        break;
+
+        case 4:
+        alerta.textContent = "Deslogado com sucesso.";
+        alerta.classList.remove("alert-danger");
+        alerta.classList.add("alert-success");
         break;
 
         default:
