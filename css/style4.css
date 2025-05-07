@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+}
+
+h1 {
+    text-align: center;
+    color: #990000;
+}
+.area{
+    margin-top: 5rem;
+    height: 60vh;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 40%;
+  margin: 0 auto; 
+}
+
+form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    width: 85%; /* Troquei de 250% para 250px, pois 250% estoura o layout */
+    height: 8%; /* 50% não fazia sentido — altura agora fixa */
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+    padding: 20px;
+}
+
+
+button {
+    display: flex;
+    color: white;
+    width: 85%;
+    height: 20%;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-weight: 600;
+    justify-content: center;
+}
+h2{
+    margin-bottom: 3rem;
+}
+.p1 {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+.navbar-custom {
+  background-color: #9d0b0e; /* Vermelho Fatec */
+}
+.descricao {
+  background-color: #ededed; /* Cinza claro Fatec */
+  min-height: 90vh; /* 90% da altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.descricao h1 {
+  color: #9d0b0e;
+}
+.descricao p {
+  font-size: 1.2rem;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 1200px) {
+    .area {
+      width: 35%;
+      padding: 50px 40px;
+    }
+  
+    input, button {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    .area {
+      width: 60%;
+      padding: 40px 30px;
+    }
+  
+    input, button {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .area {
+      width: 90%;
+      height: auto;
+      padding: 30px 20px;
+    }
+  
+    input, button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  
+    .p1 {
+      font-size: 0.7rem;
+      margin-top: 2rem;
+    }
+  }
+  
