@@ -3,7 +3,7 @@
   
   $usuario = ucfirst(strtolower($_SESSION["usuario"]));
 
-  if(!isset($_SESSION["logado"])) {
+  if(!isset($_SESSION["logado"]) || !$_SESSION["logado"]) {
     header("Location: login.php");
   }
 
@@ -56,7 +56,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="enviar_projeto.html">Enviar Projeto</a>
+          <a class="nav-link text-white" href="enviar_projeto.php">Enviar Projeto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Solicitações</a>

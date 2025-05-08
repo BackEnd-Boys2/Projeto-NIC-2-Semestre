@@ -9,12 +9,16 @@
     // Criptografa a senha
     $senha_hash = hash('sha256', $senha);
 
+    // Cria o comando de select e executa passando o login como parâmetro
     $sql = "SELECT * FROM usuarios WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$login]);
+    // Insere os valores recebidos na variavel usuário. Os valores serão listados como array associativo 
     $usuario = $stmt->fetch();
 
+    // Se o usuário existir e a consulta tiver armazenado os valores, passa para a segunda verificação
     if($usuario) {
+        // Se a senha digitada for igual a senha no banco de dados, inicia a sessão do usuário
         if($senha_hash === $usuario["senha"]) {
             
             $_SESSION["usuario_id"] = $usuario["id"];
@@ -28,19 +32,18 @@
             else {
                 header("Location: ../pagina_aluno.php");
             }
-            
-        } else {
-            // Senha incorreta
+        }
+        // Caso a senha esteja errada, retorna pra tela de login com uma mensagem
+        else {
             $_SESSION["logado"] = false;
             $_SESSION["erro_login"] = 2;
             header("Location: ../login.php");
         }
-    } else {
-        // Login incorreto
+    }
+    // Caso o usuário não tenha sido encontrado, retorna pra tela de login com uma mensagem
+    else {
         $_SESSION["logado"] = false;
         $_SESSION["erro_login"] = 1;
         header("Location: ../login.php");
-        echo "<br>";
-        echo "erro";
     }
 ?>

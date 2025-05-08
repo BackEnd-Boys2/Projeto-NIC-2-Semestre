@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  
+  $usuario = ucfirst(strtolower($_SESSION["usuario"]));
+
+  if(!isset($_SESSION["logado"]) || !$_SESSION["logado"]) {
+    header("Location: login.php");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

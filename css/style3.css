@@ -32,6 +32,9 @@
     font-size: 1.5em;
     color: #333;
   }
+  section h2 {
+    margin-top: 5%;
+  }
   
   .descricao {
     font-size: 1em;
@@ -62,6 +65,11 @@
  
   .introducao, .conclusao, .beneficios {
   margin-top: 8px;
+  }
 
+  @media (max-width: 780px) {
+    section h2 {
+      margin-top: 10%;
+    }
   }
  
