@@ -274,6 +274,15 @@
     <p class="introducao">
         O Núcleo de Iniciação Científica e Tecnológica (ICT) é um órgão institucional da Fatec Marília, subordinado à Direção da Instituição. Sua função é direcionar, incentivar e coordenar a comunidade acadêmica na realização de atividades relacionadas à pesquisa, extensão e inovação.
     </p>
+    <h2>Efetuar Inscrição</h2>
+    <p class="introducao">
+        Para se inscrever, basta preencher o seu e-mail institucional abaixo clicar em "Inscrever-se". Será enviado no seu e-mail institucional uma confirmação de inscrição. O login e senha são o e-mail institucional e a senha do SIGA. Caso já tenha efetuado a inscrição, <a href="../login.php">clique aqui</a>.
+    </p>
+
+    <form id="submitEmail" method="POST" action="backend/enviar_email.php">
+        <input type="email" name="email" placeholder="Seu e-mail institucional" size="50" required>
+        <button type="submit" class="botao-acao">Inscrever-se</button>
+    </form>
 
 </div>
 
@@ -298,7 +307,7 @@
       </header>
       <p class="descricao">Trabalhos que já foram aceitos.</p>
       <footer class="quadro-rodape">
-        <a href="trabalhosaceitos.html" class="botao-acao">Ver mais</a>
+        <a href="trabalhosaceitos.php" class="botao-acao">Ver mais</a>
       </footer>
     </article>
   </div>
@@ -310,7 +319,7 @@
       </header>
       <p class="descricao">Clique aqui para se inscrever.</p>
       <footer class="quadro-rodape">
-        <a href="inscrições.html" class="botao-acao">Ver mais</a>
+        <a href="inscricoes.php" class="botao-acao">Ver mais</a>
       </footer>
     </article>
   </div>

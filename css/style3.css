@@ -62,6 +62,14 @@
     background-color: #0056b3;
   }
 
+  #submitEmail {
+    margin: 1% 0 3% 0;
+    color: #666;
+  }
+  #submitEmail input{
+    padding: 0.5% 2%;
+    border-radius: 5px;
+  }
  
   .introducao, .conclusao, .beneficios {
   margin-top: 8px;

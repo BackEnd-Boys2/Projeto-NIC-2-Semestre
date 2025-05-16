@@ -310,7 +310,7 @@
       </header>
       <p class="descricao">Trabalhos que já foram aceitos.</p>
       <footer class="quadro-rodape">
-        <a href="trabalhosaceitos.html" class="botao-acao">Ver mais</a>
+        <a href="trabalhosaceitos.php" class="botao-acao">Ver mais</a>
       </footer>
     </article>
   </div>
@@ -322,7 +322,7 @@
       </header>
       <p class="descricao">Clique aqui para se inscrever.</p>
       <footer class="quadro-rodape">
-        <a href="inscricoes.html" class="botao-acao">Ver mais</a>
+        <a href="inscricoes.php" class="botao-acao">Ver mais</a>
       </footer>
     </article>
   </div>
