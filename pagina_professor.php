@@ -13,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página do Aluno</title>
+  <title>Página do Professor</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Cores da Fatec - CPS */
@@ -56,7 +56,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="enviar_projeto.php">Enviar Projeto</a>
+          <a class="nav-link text-white" href="enviar_projeto.php">Listar projetos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Solicitações</a>

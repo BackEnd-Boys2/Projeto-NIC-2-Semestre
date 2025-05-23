@@ -27,7 +27,7 @@
             $_SESSION["logado"] = true;
             
             if($usuario["is_adm"] === 1) {
-                header("Location: ../pagina_professor.html");
+                header("Location: ../pagina_professor.php");
             }
             else {
                 header("Location: ../pagina_aluno.php");
