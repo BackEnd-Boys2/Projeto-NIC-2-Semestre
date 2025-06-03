@@ -56,10 +56,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="enviar_projeto.php">Enviar Projeto</a>
+          <a class="nav-link text-white" href="form_enviar_projeto.php">Enviar Projeto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Solicitações</a>
+          <a class="nav-link text-white" href="consultar_projetos.php">Solicitações</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="backend/logout.php">Deslogar</a>

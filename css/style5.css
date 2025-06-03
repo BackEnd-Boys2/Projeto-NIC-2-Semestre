@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+    margin-top: 3rem;
+    width: 95%;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+a, a:visited {
+    color: #990000;
+    text-decoration: none;
+}
+a:hover {
+    color:#f00;
+}
+.error {
+    text-align: center;
+    color: #f00;
+    margin: 3rem 0 0 0;
+}
+
+#returnLink, #returnLink:visited {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+#returnLink svg {
+  fill: #990000;
+  width: 3rem;
+  height: 3rem;
+}
+#returnLink svg:hover {
+  fill: #f00;
+}
+
+h1 {
+    text-align: center;
+    color: #990000;
+    margin: 2rem 0 3rem 0;
+}
+
+input {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #990000;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f00;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+table td {
+  font-size: 0.8rem;
+}
+
+table th {
+  background-color: #cccccc;
+}
