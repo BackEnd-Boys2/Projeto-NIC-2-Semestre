@@ -9,7 +9,7 @@
         header("Location: login.php");
     }
 
-    $sql = "SELECT * FROM vw_consultar_projetos WHERE id_mentor = ?";
+    $sql = "SELECT * FROM vw_consultar_projetos WHERE id_mentor = ? AND status = 'Em análise'";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_SESSION["usuario_id"]]);
     $projetos = $stmt->fetchAll();
@@ -37,7 +37,6 @@
                     <th>Descrição</th>
                     <th>Aluno</th>
                     <th>Data de Envio</th>
-                    <th>Status</th>
                     <th>Arquivo</th>
                     <th>Ações</th>
                 </tr>
@@ -50,10 +49,8 @@
                         <td><?= $projeto["descricao"]; ?></td>
                         <td><?= $projeto["nome_aluno"] ?></td>
                         <td><?= $projeto["data_formatada"]; ?></td>
-                        <td><?= $projeto["status"]; ?></td>
-                        <!-- Ajusta o nome do arquivo para download removendo o código unico e a parte do diretório, deixando apenas o nome base do arquivo -->
                         <td><a href="<?= $projeto["caminho_arquivo"]; ?>" download="<?= preg_replace('/^[^_]+_/', '', basename($projeto["caminho_arquivo"])); ?>">Baixar</a></td>
-                        <td><a href="backend/excluir_projeto.php?id=<?= $projeto["id"]; ?>">🗑️</a> | <a href="backend/form_alterar_projeto.php?id=<?= $projeto["id"]; ?>">📝</a></td>
+                        <td><a href="backend/avaliar_projeto.php?id=<?= $projeto["id"]; ?>&acao=Aprovado">Aprovar ✅</a> | <a href="backend/avaliar_projeto.php?id=<?= $projeto["id"]; ?>&acao=Reprovado">Reprovar ❌</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
