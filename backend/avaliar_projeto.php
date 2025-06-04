@@ -6,7 +6,7 @@
     $usuario = ucfirst(strtolower($_SESSION["usuario"]));
 
     if(!isset($_SESSION["logado"]) || !$_SESSION["logado"]) {
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
 
     $id = intval(htmlspecialchars($_GET["id"]));
